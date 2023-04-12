@@ -1,0 +1,65 @@
+.tours {
+  &__container {
+    display: flex;
+  }
+}
+
+.card {
+  -moz-perspective: 100rem;
+  perspective: 100rem;
+
+  height: 50rem;
+  width: 100%;
+
+  position: relative;
+
+  &__side {
+    width: 100%;
+    transition: all 500ms;
+    color: $color-white;
+    font-size: 3rem;
+    height: 100%;
+    transition: all 500ms ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-front {
+      background-color: green;
+    }
+
+    &-back {
+      background-color: orangered;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+  &:hover &__side-front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side-back {
+    transform: rotateY(360deg);
+  }
+}

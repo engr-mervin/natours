@@ -1,6 +1,5 @@
 .feature-box {
   background-color: rgba($color-white, 0.8);
-
   font-size: 1.5rem;
   padding: 2.5rem;
   border-radius: 3px;
@@ -10,6 +9,10 @@
 
   transition: transform 300ms;
   margin: 0 3rem;
+
+  &__container {
+    display: flex;
+  }
   &__icon {
     padding: 0 0.5rem;
     font-size: 6rem;
