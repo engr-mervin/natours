@@ -1,0 +1,29 @@
+@function width($num, $den) {
+  //useable space in rem units
+  $useable: $grid-width - (($den) * $gutter-horizontal) + $gutter-horizontal;
+
+  //useable space in % unit
+  $gutper: $gutter-horizontal * 100 / $grid-width;
+  $useable2: 100-$gutper * ($den - 1);
+
+  $result: ($num - 1) * $gutper + $num * $useable2 / $den;
+
+  @return $result * 1%;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin column {
+  background-color: orangered;
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+}
