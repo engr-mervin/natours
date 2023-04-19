@@ -533,6 +533,75 @@ body {
     transform: translateX(-4rem) scale(1.05);
     filter: blur(3px) brightness(80%); }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target > .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 400ms 200ms; }
+  .popup__content {
+    transition: all 400ms;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    border-radius: 0.3rem;
+    display: table;
+    overflow: hidden; }
+  .popup__left {
+    width: 33.33333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.66667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    -moz-column-rule: 1px solid #eee;
+    column-rule: 1px solid #eee;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .popup__close:link, .popup__close:visited {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    text-decoration: none;
+    line-height: 1;
+    color: #777;
+    font-size: 3rem;
+    display: inline-block;
+    transition: all 300ms; }
+  .popup__close:hover, .popup__close:active {
+    color: #55c57a; }
+
 /*
 
 .about {
@@ -720,7 +789,10 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
-  z-index: 102; }
+  z-index: 102;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center; }
 
 .navigation__background {
   height: 6rem;
@@ -731,15 +803,18 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
-  transform: scale(80); }
+  transition: all 800ms cubic-bezier(0.51, 1.09, 0.5, 0.97); }
 
 .navigation__nav {
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 101; }
+  left: -25%;
+  z-index: 101;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 800ms cubic-bezier(0.51, 1.09, 0.5, 0.97); }
 
 .navigation__list {
   position: absolute;
@@ -751,6 +826,33 @@ body {
 
 .navigation__item {
   margin: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  pointer-events: all;
+  left: 0%; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    transition: all 400ms, transform 400ms, top 400ms 500ms;
+    transform-origin: center; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__icon::before {
+    top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
@@ -768,6 +870,25 @@ body {
   background-position: 100% 0%;
   color: #55c57a;
   transform: translateX(1rem); }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__button > .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked ~ .navigation__button > .navigation__icon::before {
+  transform: rotateZ(225deg);
+  top: 0;
+  transition: all 400ms, transform 400ms 500ms, top 400ms; }
+
+.navigation__checkbox:checked ~ .navigation__button > .navigation__icon::after {
+  transform: rotateZ(-225deg);
+  top: 0;
+  transition: all 400ms, transform 400ms 500ms, top 400ms; }
 
 .section-about {
   background-color: #f7f7f7;

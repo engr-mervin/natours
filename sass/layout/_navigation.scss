@@ -15,6 +15,10 @@
 
     z-index: 102;
 
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+
+    cursor: pointer;
+    text-align: center;
     // border: 1px solid $color-grey-light-2;
   }
 
@@ -32,8 +36,9 @@
     );
 
     z-index: 100;
+    transition: all 800ms cubic-bezier(0.51, 1.09, 0.5, 0.97);
 
-    transform: scale(80);
+    // transform: scale(80);
   }
 
   &__nav {
@@ -41,8 +46,13 @@
     width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: -25%;
     z-index: 101;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 800ms cubic-bezier(0.51, 1.09, 0.5, 0.97);
   }
 
   &__list {
@@ -58,6 +68,48 @@
 
   &__item {
     margin: 1rem;
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    pointer-events: all;
+    left: 0%;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  // &__checkbox:checked ~ &__button {
+  // }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.3rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+      transition: all 400ms, transform 400ms, top 400ms 500ms;
+
+      transform-origin: center;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
   }
 
   &__link {
@@ -91,5 +143,29 @@
 
       transform: translateX(1rem);
     }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked ~ &__button > &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked ~ &__button > &__icon::before {
+    transform: rotateZ(225deg);
+    top: 0;
+    transition: all 400ms, transform 400ms 500ms, top 400ms;
+  }
+
+  &__checkbox:checked ~ &__button > &__icon::after {
+    transform: rotateZ(-225deg);
+    top: 0;
+    transition: all 400ms, transform 400ms 500ms, top 400ms;
   }
 }
