@@ -27,3 +27,39 @@
     margin-right: $gutter-horizontal;
   }
 }
+
+//MEDIA QUERY MANAGER
+/*
+0-600px         Phone
+600-900px       Table portrait
+900-1200px:     Tablet landscape
+1200px-1800px:  Desktops
+1800px+         Big desktop
+*/
+
+/*
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+*/
+
+//BASE-TYPO>GEN LAYOUT+GRID>PAGE LAYOUT>COMPONENTS
+
+@mixin respondMax($breakpoint) {
+  @media (max-width: ($breakpoint/16px*1em)) {
+    @content;
+  }
+}
+
+@mixin respondMin($breakpoint) {
+  @media (min-width: ($breakpoint/16px*1em)) {
+    @content;
+  }
+}

@@ -3,19 +3,42 @@
   padding: 25rem 0;
   margin-top: -19vh;
 
+  @include respondMax($bp-custom-1050) {
+    padding-bottom: 70rem;
+    padding-top: 28rem;
+  }
+
+  @include respondMax($bp-custom-760) {
+    padding-bottom: 60rem;
+    padding-top: 30rem;
+  }
+
+  @include respondMax($bp-phone) {
+    padding-top: 35rem;
+  }
+
   &__container {
     margin: 0 10rem;
     display: flex;
     justify-content: center;
+
+    @include respondMax($bp-custom-1050) {
+      flex-direction: column;
+    }
   }
 
   &__text-box {
     padding-right: 6rem;
+    @include respondMax($bp-custom-1050) {
+      margin-bottom: 5rem;
+      padding-right: 0;
+    }
   }
 }
 
 .section-features {
-  padding: 20rem;
+  padding: 20rem 12rem;
+
   transform: skewY(-7deg);
 
   margin-top: -10rem;
@@ -31,27 +54,82 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respondMax($bp-custom-1500) {
+    padding: 18rem 6rem;
+  }
+
+  @include respondMax($bp-custom-1250) {
+    padding: 15.5rem 4.5rem;
+  }
+
+  @include respondMax($bp-custom-1100) {
+    padding: 13.5rem 10rem;
+  }
+
+  @include respondMax($bp-custom-760) {
+    padding: 10rem 5rem;
+  }
+
+  @include respondMax($bp-custom-460) {
+    padding: 10rem 12rem;
+  }
 }
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 25rem 15rem 10rem 15rem;
+  padding: 25rem 10rem 10rem 10rem;
   margin-top: -10rem;
+
+  @include respondMax($bp-custom-1250) {
+    padding: 25rem 8rem 10rem 8rem;
+  }
+
+  @include respondMax($bp-custom-1050) {
+    padding: 25rem 4rem 10rem 4rem;
+  }
+
+  @include respondMax($bp-custom-760) {
+    padding: 25rem 22rem 10rem 22rem;
+  }
+
+  @include respondMax($bp-custom-550) {
+    padding: 25rem 15rem 10rem 15rem;
+  }
+  @include respondMax($bp-custom-460) {
+    padding: 25rem 10rem 10rem 10rem;
+  }
 }
 
 .section-stories {
   position: relative;
-  padding: 15rem 0;
+  padding: 10rem 0;
   overflow: hidden;
 }
 
 .section-book {
-  padding: 15rem 20rem;
+  padding: 15rem 15rem;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respondMin($bp-big-desk) {
+    padding: 15rem;
+  }
+
+  @include respondMax($bp-custom-1550) {
+    padding: 15rem 10rem;
+  }
+
+  @include respondMax($bp-tab-land) {
+    padding: 10rem;
+  }
+
+  @include respondMax($bp-custom-550) {
+    padding: 7.5rem;
+  }
 }
 
 .book {
@@ -71,8 +149,38 @@
 
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
 
+  @include respondMax($bp-custom-1350) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 60%,
+        rgba($color-white, 0) 60%,
+        rgba($color-white, 0) 100%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
+  @include respondMax($bp-custom-760) {
+    width: 100%;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 0%
+      ),
+      url(../img/nat-10.jpg);
+  }
   &__form {
     width: 50%;
     padding: 6rem;
+    @include respondMax($bp-custom-1350) {
+      width: 65%;
+    }
+    @include respondMax($bp-custom-760) {
+      width: 100%;
+    }
+
+    @include respondMax($bp-custom-460) {
+      padding: 4rem;
+    }
   }
 }

@@ -4,6 +4,14 @@
 
 .u-margin-bot-big {
   margin-bottom: 8rem !important;
+
+  @include respondMax($bp-tab-port) {
+    margin-bottom: 6.5rem !important;
+  }
+
+  @include respondMax($bp-phone) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-big {

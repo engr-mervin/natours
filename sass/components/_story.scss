@@ -12,6 +12,14 @@
 
   & > * {
     transform: skewX(12deg);
+    @include respondMax($bp-custom-760) {
+      transform: skewX(0);
+    }
+  }
+
+  @include respondMax($bp-custom-760) {
+    transform: skewX(0);
+    width: 80%;
   }
 
   &:not(:last-of-type) {
@@ -32,6 +40,9 @@
     clip-path: circle(50% at 50% 50%);
 
     transform: translateX(-3rem) skewX(12deg);
+    @include respondMax($bp-custom-760) {
+      transform: translateX(-3rem);
+    }
     z-index: 1;
   }
 

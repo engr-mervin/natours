@@ -21,18 +21,33 @@
     &--p1 {
       left: 0;
       top: -2rem;
+
+      @include respondMax($bp-tab-land) {
+        left: 0;
+        top: 0;
+      }
     }
 
     &--p2 {
       right: 0;
       top: 2rem;
       z-index: 1;
+
+      @include respondMax($bp-tab-land) {
+        right: 0;
+        top: 7rem;
+      }
     }
 
     &--p3 {
       left: 20%;
       top: 6rem;
       z-index: 2;
+
+      @include respondMax($bp-tab-land) {
+        left: 20%;
+        top: 14rem;
+      }
     }
 
     &:hover {

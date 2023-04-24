@@ -1,6 +1,10 @@
 .tours {
   &__container {
     display: flex;
+
+    @include respondMax($bp-custom-760) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -13,6 +17,18 @@
 
   margin: 0 5rem;
   position: relative;
+
+  @include respondMax($bp-tab-land) {
+    margin: 0 3rem;
+  }
+  @include respondMax($bp-custom-1350) {
+    margin: 0 2rem;
+  }
+
+  @include respondMax($bp-custom-760) {
+    margin: 0;
+    margin-bottom: 8rem;
+  }
 
   &__side {
     overflow: hidden;

@@ -3,7 +3,8 @@
     font-size: 1.5rem;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba($color-white, 0.5);
+    background-color: rgba($color-white, 1);
+    box-shadow: 0.5rem 1rem 2rem rgba(black, 0.06);
     border: none;
 
     font-family: inherit;
@@ -29,6 +30,10 @@
       &:invalid {
         border-bottom: 3px solid $color-secondary-dark;
       }
+    }
+
+    @include respondMax($bp-custom-760) {
+      width: 100%;
     }
   }
 

@@ -5,9 +5,21 @@
 
   &__container {
     display: flex;
-    padding: 0 20rem;
+    padding: 0 15rem;
     justify-content: space-between;
+    @include respondMax($bp-custom-1350) {
+      padding: 0 8rem;
+    }
+
+    @include respondMax($bp-custom-1050) {
+      flex-direction: column;
+      align-items: center;
+    }
+    & > * {
+      width: 45rem;
+    }
   }
+
   &__logo-box {
     margin: 0 auto;
     margin-bottom: 8rem;
@@ -15,10 +27,6 @@
   }
   &__logo {
     width: 15rem;
-  }
-
-  &__navigation {
-    width: 45rem;
   }
 
   &__list {
@@ -60,7 +68,10 @@
 
   &__copyright {
     padding-top: 2rem;
-    width: 45rem;
     border-top: 1px solid rgba($color-grey-light-2, 1);
+
+    @include respondMax($bp-custom-1050) {
+      margin-top: 8rem;
+    }
   }
 }

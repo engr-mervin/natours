@@ -49,6 +49,9 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respondMin($bp-big-desk) {
+      padding: 2rem 5rem;
+    }
   }
 
   &__img {
@@ -73,6 +76,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respondMin($bp-big-desk) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__close {
