@@ -9,6 +9,7 @@
 html {
   font-size: 62.5%; //1rem == 10px
 
+  overflow-x: clip;
   @include respondMin($bp-big-desk) {
     font-size: 75%;
   }
@@ -27,6 +28,7 @@ body {
   box-sizing: border-box;
   padding: 3rem;
 
+  overflow-x: clip;
   @include respondMax($bp-tab-port) {
     padding: 0;
   }
