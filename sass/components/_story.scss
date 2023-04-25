@@ -22,8 +22,18 @@
     width: 80%;
   }
 
+  @include respondMax($bp-phone) {
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+  @include respondMax($bp-custom-460) {
+    width: 90%;
+  }
   &:not(:last-of-type) {
     margin-bottom: 8rem;
+    @include respondMax($bp-custom-460) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__shape {

@@ -308,6 +308,9 @@ body {
         display: flex;
         flex-direction: column;
         row-gap: 10rem; } }
+    @media (max-width: 23.75em) {
+      .feature-box__container {
+        row-gap: 5rem; } }
   .feature-box__icon {
     padding: 0 0.5rem;
     font-size: 6rem;
@@ -673,8 +676,18 @@ body {
     .story {
       transform: skewX(0);
       width: 80%; } }
+  @media (max-width: 37.5em) {
+    .story {
+      padding: 4rem;
+      padding-left: 6rem; } }
+  @media (max-width: 28.75em) {
+    .story {
+      width: 90%; } }
   .story:not(:last-of-type) {
     margin-bottom: 8rem; }
+    @media (max-width: 28.75em) {
+      .story:not(:last-of-type) {
+        margin-bottom: 5rem; } }
   .story__shape {
     position: relative;
     background-color: orangered;
@@ -1137,6 +1150,13 @@ body {
   @media (max-width: 37.5em) {
     .section-about {
       padding-top: 35rem; } }
+  @media (max-width: 34.375em) {
+    .section-about {
+      padding-bottom: 55rem; } }
+  @media (max-width: 28.75em) {
+    .section-about {
+      padding-top: 30rem;
+      padding-bottom: 48rem; } }
   .section-about__container {
     margin: 0 10rem;
     display: flex;
@@ -1144,6 +1164,9 @@ body {
     @media (max-width: 65.625em) {
       .section-about__container {
         flex-direction: column; } }
+    @media (max-width: 28.75em) {
+      .section-about__container {
+        margin: 0 5rem; } }
   .section-about__text-box {
     padding-right: 6rem; }
     @media (max-width: 65.625em) {
@@ -1174,6 +1197,9 @@ body {
   @media (max-width: 28.75em) {
     .section-features {
       padding: 10rem 12rem; } }
+  @media (max-width: 23.75em) {
+    .section-features {
+      padding: 10rem 6rem; } }
 
 .section-tours {
   background-color: #f7f7f7;
@@ -1190,10 +1216,13 @@ body {
       padding: 25rem 18rem 10rem 18rem; } }
   @media (max-width: 34.375em) {
     .section-tours {
-      padding: 25rem 12rem 10rem 12rem; } }
+      padding: 20rem 12rem 10rem 12rem; } }
   @media (max-width: 28.75em) {
     .section-tours {
-      padding: 25rem 10rem 10rem 10rem; } }
+      padding: 20rem 8rem 10rem 8rem; } }
+  @media (max-width: 28.75em) {
+    .section-tours {
+      padding: 20rem 5rem 10rem 5rem; } }
 
 .section-stories {
   position: relative;
@@ -1215,12 +1244,17 @@ body {
   @media (max-width: 34.375em) {
     .section-book {
       padding: 7.5rem; } }
+  @media (max-width: 28.75em) {
+    .section-book {
+      padding: 5rem; } }
+  @media (max-width: 23.75em) {
+    .section-book {
+      padding: 3rem; } }
 
 .book {
   margin: 0 auto;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), url(../img/nat-10.jpg);
   background-size: cover;
-  height: 50rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25); }
   @media (max-width: 84.375em) {
@@ -1242,3 +1276,6 @@ body {
     @media (max-width: 28.75em) {
       .book__form {
         padding: 4rem; } }
+    @media (max-width: 23.75em) {
+      .book__form {
+        padding: 3rem; } }
