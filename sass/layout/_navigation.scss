@@ -20,6 +20,10 @@
     cursor: pointer;
     text-align: center;
     // border: 1px solid $color-grey-light-2;
+    @include respondMax($bp-custom-760) {
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &__background {
@@ -30,6 +34,12 @@
 
     top: 6.5rem;
     right: 6.5rem;
+
+    @include respondMax($bp-custom-760) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark

@@ -82,19 +82,19 @@
   margin-top: -10rem;
 
   @include respondMax($bp-custom-1250) {
-    padding: 25rem 8rem 10rem 8rem;
+    padding: 25rem 5rem 10rem 5rem;
   }
 
   @include respondMax($bp-custom-1050) {
-    padding: 25rem 4rem 10rem 4rem;
+    padding: 25rem 24rem 10rem 24rem;
   }
 
   @include respondMax($bp-custom-760) {
-    padding: 25rem 22rem 10rem 22rem;
+    padding: 25rem 18rem 10rem 18rem;
   }
 
   @include respondMax($bp-custom-550) {
-    padding: 25rem 15rem 10rem 15rem;
+    padding: 25rem 12rem 10rem 12rem;
   }
   @include respondMax($bp-custom-460) {
     padding: 25rem 10rem 10rem 10rem;

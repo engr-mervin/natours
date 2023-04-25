@@ -510,7 +510,7 @@ body {
 
 .tours__container {
   display: flex; }
-  @media (max-width: 47.5em) {
+  @media (max-width: 65.625em) {
     .tours__container {
       flex-direction: column; } }
 
@@ -521,13 +521,13 @@ body {
   width: 100%;
   margin: 0 5rem;
   position: relative; }
-  @media (max-width: 75em) {
-    .card {
-      margin: 0 3rem; } }
   @media (max-width: 84.375em) {
     .card {
       margin: 0 2rem; } }
-  @media (max-width: 47.5em) {
+  @media (max-width: 75em) {
+    .card {
+      margin: 0 3rem; } }
+  @media (max-width: 65.625em) {
     .card {
       margin: 0; }
       .card:not(:last-child) {
@@ -618,6 +618,41 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 65.625em) {
+    .card {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: none; }
+        .card__side-back {
+          transform: rotateY(0deg);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%); }
+      .card__picture {
+        height: 27rem; }
+      .card:hover .card__side-front {
+        transform: rotateY(0deg); }
+      .card:hover .card__side-back {
+        transform: rotateY(0deg); }
+      .card__details {
+        padding: 3rem; }
+      .card__cta {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        padding: 5rem 3rem 3rem 3rem;
+        margin-right: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        text-align: center; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__heading {
+        top: 16rem;
+        width: 55%; } }
 
 .story {
   width: 75%;
@@ -944,6 +979,9 @@ body {
   @media (max-width: 75em) {
     .header {
       height: 70vh; } }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -975,6 +1013,10 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center; }
+  @media (max-width: 47.5em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -986,6 +1028,10 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
   transition: all 800ms cubic-bezier(0.51, 1.09, 0.5, 0.97); }
+  @media (max-width: 47.5em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -1135,16 +1181,16 @@ body {
   margin-top: -10rem; }
   @media (max-width: 78.125em) {
     .section-tours {
-      padding: 25rem 8rem 10rem 8rem; } }
+      padding: 25rem 5rem 10rem 5rem; } }
   @media (max-width: 65.625em) {
     .section-tours {
-      padding: 25rem 4rem 10rem 4rem; } }
+      padding: 25rem 24rem 10rem 24rem; } }
   @media (max-width: 47.5em) {
     .section-tours {
-      padding: 25rem 22rem 10rem 22rem; } }
+      padding: 25rem 18rem 10rem 18rem; } }
   @media (max-width: 34.375em) {
     .section-tours {
-      padding: 25rem 15rem 10rem 15rem; } }
+      padding: 25rem 12rem 10rem 12rem; } }
   @media (max-width: 28.75em) {
     .section-tours {
       padding: 25rem 10rem 10rem 10rem; } }
