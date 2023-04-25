@@ -529,8 +529,9 @@ body {
       margin: 0 2rem; } }
   @media (max-width: 47.5em) {
     .card {
-      margin: 0;
-      margin-bottom: 8rem; } }
+      margin: 0; }
+      .card:not(:last-child) {
+        margin-bottom: 8rem; } }
   .card__side {
     overflow: hidden;
     width: 100%;
